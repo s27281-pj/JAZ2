@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: cypcze
+
+my:
+  custom:
+    property: "Hello from application yml"
+  feature:
+    enabled: false
