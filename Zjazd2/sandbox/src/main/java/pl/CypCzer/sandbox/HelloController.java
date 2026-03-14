@@ -14,8 +14,8 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "name=" + myCustomProperties.getName()
-                + ", role=" + myCustomProperties.getRole()
-                + ", project=" + myCustomProperties.getProject();
+        return "loginUrl=" + myCustomProperties.getLoginUrl()
+                + ", user=" + myCustomProperties.getCredentials().getUser()
+                + ", password=" + myCustomProperties.getCredentials().getPassword();
     }
 }

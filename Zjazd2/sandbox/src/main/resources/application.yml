@@ -1,5 +1,5 @@
-my:
-  custom:
-    name: Cyprian
-    role: student
-    project: JAZ
+custom:
+  login-url: test-login
+  credentials:
+    user: test-user
+    password: pass

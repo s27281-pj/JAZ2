@@ -4,34 +4,46 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "my.custom")
+@ConfigurationProperties(prefix = "custom")
 public class MyCustomProperties {
 
-    private String name;
-    private String role;
-    private String project;
+    private String loginUrl;
+    private Credentials credentials;
 
-    public String getName() {
-        return name;
+    public String getLoginUrl() {
+        return loginUrl;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLoginUrl(String loginUrl) {
+        this.loginUrl = loginUrl;
     }
 
-    public String getRole() {
-        return role;
+    public Credentials getCredentials() {
+        return credentials;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setCredentials(Credentials credentials) {
+        this.credentials = credentials;
     }
 
-    public String getProject() {
-        return project;
-    }
+    public static class Credentials {
+        private String user;
+        private String password;
 
-    public void setProject(String project) {
-        this.project = project;
+        public String getUser() {
+            return user;
+        }
+
+        public void setUser(String user) {
+            this.user = user;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
     }
 }
