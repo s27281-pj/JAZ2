@@ -3,32 +3,32 @@ package pl.CypCzer.sandbox;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Service
 public class FacadeService {
 
-    private final DevService devService;
-    private final QaService qaService;
-    private final ProdService prodService;
+    private final Map<String, HandlerServiceInterface> serviceMap = new HashMap<>();
 
-    @Value("${app.environment}")
+    @Value("${app.environment:DEV}")
     private String environment;
 
-    public FacadeService(DevService devService, QaService qaService, ProdService prodService) {
-        this.devService = devService;
-        this.qaService = qaService;
-        this.prodService = prodService;
+    public FacadeService(List<HandlerServiceInterface> services) {
+        for (HandlerServiceInterface service : services) {
+            serviceMap.put(service.getEnvironment().toUpperCase(), service);
+        }
     }
 
     public String execute(String input) {
-        switch (environment.toUpperCase()) {
-            case "DEV":
-                return devService.getMessage() + " | request: " + input;
-            case "QA":
-                return qaService.getMessage() + " | request: " + input;
-            case "PROD":
-                return prodService.getMessage() + " | request: " + input;
-            default:
-                return "Unknown environment: " + environment + " | request: " + input;
+        String selectedEnvironment = environment.toUpperCase();
+        HandlerServiceInterface service = serviceMap.getOrDefault(selectedEnvironment, serviceMap.get("DEV"));
+
+        if (service == null) {
+            return "No service available for environment: " + selectedEnvironment + " | request: " + input;
         }
+
+        return service.getMessage() + " | request: " + input;
     }
 }
