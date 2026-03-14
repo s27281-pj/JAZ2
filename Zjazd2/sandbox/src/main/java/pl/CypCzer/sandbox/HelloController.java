@@ -6,8 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+    private final MyCustomProperties myCustomProperties;
+
+    public HelloController(MyCustomProperties myCustomProperties) {
+        this.myCustomProperties = myCustomProperties;
+    }
+
     @GetMapping("/hello")
     public String hello() {
-        return "Hello JAZ";
+        return "name=" + myCustomProperties.getName()
+                + ", role=" + myCustomProperties.getRole()
+                + ", project=" + myCustomProperties.getProject();
     }
 }
