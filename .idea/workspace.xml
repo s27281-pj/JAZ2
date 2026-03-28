@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa9cee1a-0726-4a05-8300-b0b2f3f3ac5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/3.5_POST.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/HomeworkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/TestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
       <updated>1773473188482</updated>
       <workItem from="1773474658882" duration="1599000" />
       <workItem from="1773478810740" duration="5605000" />
-      <workItem from="1774707610201" duration="3738000" />
+      <workItem from="1774707610201" duration="4104000" />
     </task>
     <servers />
   </component>
