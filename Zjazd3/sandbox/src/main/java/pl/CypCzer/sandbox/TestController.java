@@ -22,7 +22,13 @@ public class TestController {
         return ResponseEntity.ok(myCar);
     }
 
-    // Zadanie 3.3
+    /* Zadanie 3.3
+    @GetMapping("/hello/{someValue}")
+    public ResponseEntity<String> getDynamicValue(@PathVariable String someValue) {
+        return ResponseEntity.ok(someValue);
+    } */
+
+    // Zadanie 3.4
     @GetMapping("/hello/{someValue}")
     public ResponseEntity<String> getDynamicValue(@PathVariable String someValue) {
         return ResponseEntity.ok(someValue);
