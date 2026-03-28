@@ -13,4 +13,11 @@ public class TestController {
     public ResponseEntity<String> sayHello() {
         return ResponseEntity.ok("Hello world");
     }
+
+    // Zadanie 3.2
+    @GetMapping("/model")
+    public ResponseEntity<Car> getCarModel() {
+        Car myCar = new Car("Tesla", "Model 3", 2024);
+        return ResponseEntity.ok(myCar);
+    }
 }
