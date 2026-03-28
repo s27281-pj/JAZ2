@@ -1,0 +1,5 @@
+custom:
+  login-url: test-login
+  credentials:
+    user: test-user
+    password: pass
