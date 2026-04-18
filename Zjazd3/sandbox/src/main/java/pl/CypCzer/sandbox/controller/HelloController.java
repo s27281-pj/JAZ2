@@ -1,7 +1,8 @@
-package pl.CypCzer.sandbox;
+package controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pl.CypCzer.sandbox.config.MyCustomProperties;
 
 @RestController
 public class HelloController {

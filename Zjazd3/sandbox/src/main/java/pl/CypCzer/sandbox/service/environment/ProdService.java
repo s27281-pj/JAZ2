@@ -1,17 +1,17 @@
-package pl.CypCzer.sandbox;
+package pl.CypCzer.sandbox.service;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class DevService implements HandlerServiceInterface {
+public class ProdService implements HandlerServiceInterface {
 
     @Override
     public String getEnvironment() {
-        return "DEV";
+        return "PROD";
     }
 
     @Override
     public String getMessage() {
-        return "Hello from Dev";
+        return "Hello from Prod";
     }
 }

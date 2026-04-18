@@ -1,4 +1,4 @@
-package pl.CypCzer.sandbox;
+package pl.CypCzer.sandbox.service;
 
 public interface HandlerServiceInterface {
     String getEnvironment();
