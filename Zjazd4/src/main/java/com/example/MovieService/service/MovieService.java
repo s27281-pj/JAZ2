@@ -1,48 +1,32 @@
 package com.example.MovieService.service;
 
 import com.example.MovieService.model.Movie;
+import com.example.MovieService.repository.MovieRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class MovieService {
 
-    private final List<Movie> movies = new ArrayList<>();
-    private final AtomicLong nextId = new AtomicLong(1);
+    private final MovieRepository movieRepository;
 
-    public MovieService() {
-        movies.add(new Movie(nextId.getAndIncrement(), "Blade Runner", "Sci-Fi", "Ridley Scott", 1982));
-        movies.add(new Movie(nextId.getAndIncrement(), "Alien", "Sci-Fi", "Ridley Scott", 1979));
-        movies.add(new Movie(nextId.getAndIncrement(), "The Godfather", "Crime", "Francis Ford Coppola", 1972));
+    public MovieService(final MovieRepository movieRepository) {
+        this.movieRepository = movieRepository;
     }
 
     public List<Movie> getAllMovies() {
-        return movies;
+        return movieRepository.findAll();
     }
 
     public Optional<Movie> getMovieById(Long id) {
-        return movies.stream()
-                .filter(movie -> movie.getId().equals(id))
-                .findFirst();
+        return movieRepository.findById(id);
     }
 
     public Movie addMovie(Movie movie) {
         validateMovie(movie);
-
-        Movie newMovie = new Movie(
-                nextId.getAndIncrement(),
-                movie.getName(),
-                movie.getCategory(),
-                movie.getDirector(),
-                movie.getReleaseYear()
-        );
-
-        movies.add(newMovie);
-        return newMovie;
+        return movieRepository.save(movie);
     }
 
     public Optional<Movie> updateMovie(Long id, Movie movie) {
@@ -50,7 +34,7 @@ public class MovieService {
             throw new IllegalArgumentException("Movie cannot be null");
         }
 
-        Optional<Movie> existingMovieOptional = getMovieById(id);
+        Optional<Movie> existingMovieOptional = movieRepository.findById(id);
 
         if (existingMovieOptional.isEmpty()) {
             return Optional.empty();
@@ -61,12 +45,31 @@ public class MovieService {
         existingMovie.setCategory(movie.getCategory());
         existingMovie.setDirector(movie.getDirector());
         existingMovie.setReleaseYear(movie.getReleaseYear());
+        existingMovie.setAvailable(movie.isAvailable());
 
-        return Optional.of(existingMovie);
+        return Optional.of(movieRepository.save(existingMovie));
     }
 
     public boolean deleteMovie(Long id) {
-        return movies.removeIf(movie -> movie.getId().equals(id));
+        if (!movieRepository.existsById(id)) {
+            return false;
+        }
+
+        movieRepository.deleteById(id);
+        return true;
+    }
+
+    public Optional<Movie> makeAvailable(Long id) {
+        Optional<Movie> movieOptional = movieRepository.findById(id);
+
+        if (movieOptional.isEmpty()) {
+            return Optional.empty();
+        }
+
+        Movie movie = movieOptional.get();
+        movie.setAvailable(true);
+
+        return Optional.of(movieRepository.save(movie));
     }
 
     private void validateMovie(Movie movie) {

@@ -1,5 +1,6 @@
-package pl.CypCzer.sandbox;
+package pl.CypCzer.sandbox.service;
 
+import pl.CypCzer.sandbox.service.environment.HandlerServiceInterface;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

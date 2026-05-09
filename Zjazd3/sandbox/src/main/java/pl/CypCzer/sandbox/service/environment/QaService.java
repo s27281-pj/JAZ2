@@ -1,4 +1,4 @@
-package pl.CypCzer.sandbox.service;
+package pl.CypCzer.sandbox.service.environment;
 
 import org.springframework.stereotype.Service;
 

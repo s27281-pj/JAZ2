@@ -1,13 +1,21 @@
-    package pl.CypCzer.sandbox.config;
+package pl.CypCzer.sandbox.controller;
 
-    import org.springframework.web.bind.annotation.GetMapping;
-    import org.springframework.web.bind.annotation.RestController;
+import pl.CypCzer.sandbox.service.ExceptionService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-    @RestController
-    public class ExceptionController {
+@RestController
+public class ExceptionController {
 
-        @GetMapping({"/exception", "/excpetion"})
-        public String throwException() {
-            throw new RuntimeException("To jest mój przykładowy błąd");
-        }
+    private final ExceptionService exceptionService;
+
+    public ExceptionController(ExceptionService exceptionService) {
+        this.exceptionService = exceptionService;
     }
+
+    @GetMapping({"/exception", "/excpetion"})
+    public String throwException() {
+        exceptionService.throwExampleException();
+        return "never happens";
+    }
+}

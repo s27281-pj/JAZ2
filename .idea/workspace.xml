@@ -5,8 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa9cee1a-0726-4a05-8300-b0b2f3f3ac5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/HomeworkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/repository/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/advice/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/config/MyCustomProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/config/MyCustomProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/ExceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/HomeworkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/HomeworkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/runner/RequestExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/runner/RequestExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/ExceptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/ExceptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/FacadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/FacadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/HomeworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/HomeworkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/DevService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/DevService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/HandlerServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/HandlerServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/ProdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/ProdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/QaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/QaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/StagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd3/sandbox/src/main/java/pl/CypCzer/sandbox/service/environment/StagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd4/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/MovieServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/MovieServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/model/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd4/src/main/java/com/example/MovieService/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zjazd4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Zjazd4/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +64,13 @@
     &quot;accountId&quot;: &quot;52326990-bfba-491a-8649-2bdd3e5ad012&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -53,7 +89,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Application.executor": "Run",
+    "Spring Boot.MovieServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cypri/Repozytoria/JAZ/JAZ",
@@ -62,8 +100,13 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/cypri/Repozytoria/JAZ/JAZ/src/Main.java",
+    "onboarding.tips.debug.path": "C:/Users/cypri/Repozytoria/JAZ/JAZ/Zjazd4/Repository/src/Main.java",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -72,14 +115,22 @@
       <recent name="C:\Users\cypri\Repozytoria\JAZ\JAZ\Zjazd1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cypri\Repozytoria\JAZ\JAZ\Zjazd4\src\main\java" />
       <recent name="C:\Users\cypri\Repozytoria\JAZ\JAZ\Zjazd3\sandbox\src\main\java\pl\CypCzer\sandbox" />
       <recent name="C:\Users\cypri\Repozytoria\JAZ\JAZ" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.MovieServiceApplication">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="sandbox" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pl.CypCzer.sandbox.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MovieService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.MovieService.MovieServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,7 +153,10 @@
       <updated>1773473188482</updated>
       <workItem from="1773474658882" duration="1599000" />
       <workItem from="1773478810740" duration="5605000" />
-      <workItem from="1774707610201" duration="4104000" />
+      <workItem from="1774707610201" duration="5329000" />
+      <workItem from="1775373868186" duration="23000" />
+      <workItem from="1776494559941" duration="7512000" />
+      <workItem from="1778313394694" duration="3633000" />
     </task>
     <servers />
   </component>
@@ -116,6 +170,11 @@
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Zjazd4/src/main/java/repository/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

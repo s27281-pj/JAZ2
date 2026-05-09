@@ -1,4 +1,4 @@
-package pl.CypCzer.sandbox;
+package pl.CypCzer.sandbox.model;
 
 public class Car {
     private String brand;

@@ -1,5 +1,6 @@
-package pl.CypCzer.sandbox;
+package pl.CypCzer.sandbox.runner;
 
+import pl.CypCzer.sandbox.service.FacadeService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

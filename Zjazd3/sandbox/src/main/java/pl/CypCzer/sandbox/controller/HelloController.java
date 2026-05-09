@@ -1,22 +1,20 @@
-package controller;
+package pl.CypCzer.sandbox.controller;
 
+import pl.CypCzer.sandbox.service.HelloService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.CypCzer.sandbox.config.MyCustomProperties;
 
 @RestController
 public class HelloController {
 
-    private final MyCustomProperties myCustomProperties;
+    private final HelloService helloService;
 
-    public HelloController(MyCustomProperties myCustomProperties) {
-        this.myCustomProperties = myCustomProperties;
+    public HelloController(HelloService helloService) {
+        this.helloService = helloService;
     }
 
     @GetMapping("/hello")
     public String hello() {
-        return "loginUrl=" + myCustomProperties.getLoginUrl()
-                + ", user=" + myCustomProperties.getCredentials().getUser()
-                + ", password=" + myCustomProperties.getCredentials().getPassword();
+        return helloService.buildHelloMessage();
     }
 }

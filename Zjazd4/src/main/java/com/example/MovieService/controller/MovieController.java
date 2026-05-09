@@ -68,4 +68,14 @@ public class MovieController {
 
         return ResponseEntity.notFound().build();
     }
+
+    @PatchMapping("/movies/{id}/available")
+    public ResponseEntity<Movie> makeMovieAvailable(@PathVariable Long id) {
+        Optional<Movie> updatedMovie = movieService.makeAvailable(id);
+        return updatedMovie.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+
+
 }

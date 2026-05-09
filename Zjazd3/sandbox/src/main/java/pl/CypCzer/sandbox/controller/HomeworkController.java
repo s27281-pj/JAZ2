@@ -1,5 +1,7 @@
-package pl.CypCzer.sandbox;
+package pl.CypCzer.sandbox.controller;
 
+import pl.CypCzer.sandbox.model.Car;
+import pl.CypCzer.sandbox.service.HomeworkService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -7,41 +9,35 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/homework")
 public class HomeworkController {
 
-    // 1. GET z PathVariable
-    // Przykład: http://localhost:8080/homework/path/Audi
+    private final HomeworkService homeworkService;
+
+    public HomeworkController(HomeworkService homeworkService) {
+        this.homeworkService = homeworkService;
+    }
+
     @GetMapping("/path/{value}")
     public ResponseEntity<Car> getByPath(@PathVariable String value) {
-        return ResponseEntity.ok(new Car(value, "FromPath", 2024));
+        return ResponseEntity.ok(homeworkService.getByPath(value));
     }
 
-    // 2. GET z RequestParam
-    // Przykład: http://localhost:8080/homework/param?brand=BMW
     @GetMapping("/param")
     public ResponseEntity<Car> getByParam(@RequestParam String brand) {
-        return ResponseEntity.ok(new Car(brand, "FromParam", 2024));
+        return ResponseEntity.ok(homeworkService.getByParam(brand));
     }
 
-    // 3. POST z RequestBody
-    // Zwraca dostarczone dane
     @PostMapping
     public ResponseEntity<Car> postCar(@RequestBody Car car) {
-        return ResponseEntity.ok(car);
+        return ResponseEntity.ok(homeworkService.postCar(car));
     }
 
-    // 4. PUT z PathVariable i RequestBody
-    // Przykład: http://localhost:8080/homework/update/123
     @PutMapping("/update/{id}")
     public ResponseEntity<Car> putCar(@PathVariable String id, @RequestBody Car car) {
-        // Dodajemy ID do modelu, żeby pokazać, że PathVariable zadziałał
-        car.setModel(car.getModel() + " (ID: " + id + ")");
-        return ResponseEntity.ok(car);
+        return ResponseEntity.ok(homeworkService.putCar(id, car));
     }
 
-    // 5. DELETE z PathVariable
-    // Zwraca status 200 bez body (ResponseEntity.ok().build())
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCar(@PathVariable String id) {
-        System.out.println("Usuwanie zasobu o ID: " + id);
+        homeworkService.deleteCar(id);
         return ResponseEntity.ok().build();
     }
 }

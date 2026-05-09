@@ -1,5 +1,6 @@
-package pl.CypCzer.sandbox;
+package pl.CypCzer.sandbox.controller;
 
+import pl.CypCzer.sandbox.service.FacadeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

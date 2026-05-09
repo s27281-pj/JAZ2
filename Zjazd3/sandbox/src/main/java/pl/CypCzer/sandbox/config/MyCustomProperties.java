@@ -1,4 +1,4 @@
-    package pl.CypCzer.sandbox;
+    package pl.CypCzer.sandbox.config;
 
     import org.springframework.boot.context.properties.ConfigurationProperties;
     import org.springframework.stereotype.Component;
