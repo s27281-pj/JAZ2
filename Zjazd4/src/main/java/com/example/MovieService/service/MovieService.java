@@ -72,6 +72,19 @@ public class MovieService {
         return Optional.of(movieRepository.save(movie));
     }
 
+    public Optional<Movie> makeUnavailable(Long id) {
+        Optional<Movie> movieOptional = movieRepository.findById(id);
+
+        if (movieOptional.isEmpty()) {
+            return Optional.empty();
+        }
+
+        Movie movie = movieOptional.get();
+        movie.setAvailable(false);
+
+        return Optional.of(movieRepository.save(movie));
+    }
+
     private void validateMovie(Movie movie) {
         if (movie == null) {
             throw new IllegalArgumentException("Movie cannot be null");

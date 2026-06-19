@@ -1,5 +1,6 @@
 package com.example.MovieService.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
 @Entity
@@ -18,24 +19,34 @@ import jakarta.persistence.*;
                 query = "SELECT CASE WHEN COUNT(m) > 0 THEN true ELSE false END FROM Movie m WHERE m.id = :id"
         )
 })
+@Schema(
+        name = "Movie",
+        description = "Model filmu przechowywany w MovieService. Zawiera podstawowe informacje o filmie oraz jego dostępności."
+)
 public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Unikalny identyfikator filmu", example = "1")
     private Long id;
 
     @Column(nullable = false)
+    @Schema(description = "Nazwa filmu", example = "Blade Runner")
     private String name;
 
     @Column(nullable = false)
+    @Schema(description = "Kategoria filmu", example = "Sci-Fi")
     private String category;
 
+    @Schema(description = "Reżyser filmu", example = "Ridley Scott")
     private String director;
 
     @Column(name = "release_year")
+    @Schema(description = "Rok wydania filmu", example = "1982")
     private Integer releaseYear;
 
     @Column(name = "is_available", nullable = false)
+    @Schema(description = "Informacja, czy film jest dostępny", example = "true")
     private boolean isAvailable;
 
     public Movie() {
