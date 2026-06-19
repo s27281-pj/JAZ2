@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: RentalService
+
+server:
+  port: 8081
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: alpha
+    tagsSorter: alpha
+    displayRequestDuration: true
+    docExpansion: list
+    filter: true
+    deepLinking: true
+    tryItOutEnabled: true
+    defaultModelsExpandDepth: 2
