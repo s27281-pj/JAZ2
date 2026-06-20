@@ -14,6 +14,6 @@ class OpenApiConfig {
                 .info(new Info()
                         .title("NBP exchange rates API")
                         .version("1.0.0")
-                        .description("API wyliczajace sredni kurs waluty z ostatnich X dni na podstawie danych NBP."));
+                        .description("API wyliczajace sredni kurs waluty z podanego przedzialu dat na podstawie danych NBP."));
     }
 }
