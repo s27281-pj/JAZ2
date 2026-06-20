@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Service
@@ -33,19 +34,25 @@ public class ExchangeRateService {
     }
 
     @Transactional
-    public ExchangeRateResponse calculateAverageRate(String currency, int days) {
+    public ExchangeRateResponse calculateAverageRate(String currency, LocalDate startDate, LocalDate endDate) {
         if (currency == null || currency.isBlank()) {
             throw new InvalidRequestException("Currency is required");
         }
-        if (days < 1) {
-            throw new InvalidRequestException("Days must be greater than 0");
+        if (startDate == null) {
+            throw new InvalidRequestException("Start date is required");
         }
-        if (days > 255) {
-            throw new InvalidRequestException("NBP API supports up to 255 last quotations");
+        if (endDate == null) {
+            throw new InvalidRequestException("End date is required");
+        }
+        if (startDate.isAfter(endDate)) {
+            throw new InvalidRequestException("Start date must not be after end date");
+        }
+        if (endDate.isAfter(LocalDate.now())) {
+            throw new InvalidRequestException("End date must not be in the future");
         }
 
         String normalizedCurrency = currency.trim().toUpperCase();
-        String responseJson = nbpClient.getAverageRatesJson(normalizedCurrency, days);
+        String responseJson = nbpClient.getAverageRatesJson(normalizedCurrency, startDate, endDate);
         NbpResponse nbpResponse = parseResponse(responseJson);
 
         if (nbpResponse.rates() == null || nbpResponse.rates().isEmpty()) {
@@ -58,13 +65,14 @@ public class ExchangeRateService {
         BigDecimal averageRate = sum.divide(BigDecimal.valueOf(nbpResponse.rates().size()), 6, RoundingMode.HALF_UP);
 
         ExchangeRateQuery savedQuery = exchangeRateQueryRepository.save(
-                new ExchangeRateQuery(normalizedCurrency, days, averageRate, LocalDateTime.now())
+                new ExchangeRateQuery(normalizedCurrency, startDate, endDate, averageRate, LocalDateTime.now())
         );
 
         return new ExchangeRateResponse(
                 savedQuery.getId(),
                 savedQuery.getCurrency(),
-                savedQuery.getDays(),
+                savedQuery.getStartDate(),
+                savedQuery.getEndDate(),
                 savedQuery.getAverageRate(),
                 savedQuery.getRequestedAt()
         );

@@ -12,6 +12,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.util.List;
 
 @Component
@@ -27,9 +28,9 @@ public class NbpClient {
                 .build();
     }
 
-    public String getAverageRatesJson(String currency, int days) {
+    public String getAverageRatesJson(String currency, LocalDate startDate, LocalDate endDate) {
         URI uri = UriComponentsBuilder.fromUriString(nbpProperties.baseUrl())
-                .pathSegment("exchangerates", "rates", "a", currency, "last", String.valueOf(days))
+                .pathSegment("exchangerates", "rates", "a", currency, startDate.toString(), endDate.toString())
                 .queryParam("format", "json")
                 .build()
                 .toUri();
