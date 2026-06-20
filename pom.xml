@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.api</groupId>
-	<artifactId>nbp</artifactId>
+	<artifactId>jaz-s27281-nbp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
+	<name>jaz-s27281-nbp</name>
 	<description/>
 	<url/>
 	<licenses>
