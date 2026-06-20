@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 @Service
 public class ExchangeRateService {
@@ -49,6 +50,9 @@ public class ExchangeRateService {
         }
         if (endDate.isAfter(LocalDate.now())) {
             throw new InvalidRequestException("End date must not be in the future");
+        }
+        if (ChronoUnit.DAYS.between(startDate, endDate) > 92) {
+            throw new InvalidRequestException("Date range cannot be longer than 93 days");
         }
 
         String normalizedCurrency = currency.trim().toUpperCase();

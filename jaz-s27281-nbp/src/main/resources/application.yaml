@@ -22,7 +22,7 @@ springdoc:
 
 nbp:
   api:
-    base-url: http://api.nbp.pl/api
+    base-url: https://api.nbp.pl/api
 
 server:
   port: 8081
